@@ -23,4 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # Token
-token_brahian.txt
+.token_brahian.txt
+.nvmrc
