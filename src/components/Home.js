@@ -1,5 +1,4 @@
-import React from 'react';
-
+// Joa
 const Home = () => (
   <div>
     <h2>Home</h2>
