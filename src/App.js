@@ -9,9 +9,9 @@ import {Container} from 'react-bootstrap'
 function App() {
   return (
     <Container>
-      <Banner/>
       <BrowserRouter>
         <NavNav/>
+        <Banner/>
         <hr />
         <RoutesRoute/>
       </BrowserRouter>
