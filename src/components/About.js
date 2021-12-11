@@ -6,6 +6,8 @@ import serv3 from "../assets/Serv3.jpg"
 import serv4 from "../assets/Serv4.jpg"
 import serv5 from "../assets/Serv5.jpg"
 import serv6 from "../assets/Serv6.jpg"
+const About = () =>{
+  
 /*eslint-disable-next-line*/
 Array.prototype.chunk = function(size) {
   const result = [];
@@ -37,7 +39,8 @@ const items = [
 ];
 
 
-const About = () => (
+  
+  return(
   <div>
     <h2>About</h2>
     <Carousel>
@@ -59,6 +62,7 @@ const About = () => (
         ))}
       </Carousel>
   </div>
-);
+
+)};
 
 export default About;

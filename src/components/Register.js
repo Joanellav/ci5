@@ -3,7 +3,7 @@ import {Alert} from 'react-bootstrap'
 
 const Register = () => (
   <div>
-    <form>
+    <form className="mb-5">
       <Alert variant="secondary" className="mt-1">
                 <h2>Sign up</h2>
       </Alert>
@@ -35,6 +35,7 @@ const Register = () => (
                 <button type="submit" className="btn btn-primary btn-block">Submit</button>
             
             </form>
+            
   </div>
 );
 

@@ -7,7 +7,7 @@ const Contact = () => (
     <Alert variant="secondary" className="mt-1"><h2>Leave us your message</h2></Alert>
     <form className="mb-5">
           <div className="form-group">
-            <label htmlFor="nya" className="negrita">Nombres y Apellidos</label>
+            <label htmlFor="nya" className="negrita">Full Name</label>
             <input type="text" className="form-control" id="nya" required />            
           </div>
  
@@ -22,11 +22,11 @@ const Contact = () => (
           </div>
  
           <div className="form-group">
-            <label htmlFor="mensaje" className="negrita">Mensaje</label>
+            <label htmlFor="mensaje" className="negrita">Message</label>
             <textarea className="form-control" id="mensaje" required></textarea>
           </div>
  
-          <button type="submit" className="btn btn-primary">Enviar</button>
+          <button type="submit" className="btn btn-primary">Send</button>
  
         </form>
   </div>

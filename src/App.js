@@ -15,6 +15,9 @@ function App() {
         <hr />
         <RoutesRoute/>
       </BrowserRouter>
+        <hr />
+        <hr />
+        <p>Uninorte 2021. Desarrollado con fines academicos para el curso de programación en MINTIC</p>
     </Container>
   );
 }
