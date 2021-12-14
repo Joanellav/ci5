@@ -1,20 +1,29 @@
-import{Link} from "react-router-dom";
 // Joa
+import{Link} from "react-router-dom";
 import {Button, Modal} from 'react-bootstrap'
 import Form from "react-bootstrap/Form";
 import React, { useState } from 'react';
 
-
-
 const NavNav = () => {
+    
+    const [show2, setShow2] = useState(false);
+    const handleClose2 = () => setShow2(false);
+    const handleShow2 = () => setShow2(true);
+
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
   function validateForm() {
     return email.length > 0 && password.length > 0;
+  }
+
+  function validateForm2() {
+    return name.length > 0  && email.length > 0 && password.length > 0;
   }
 
   function handleSubmit(event) {
@@ -81,9 +90,62 @@ const NavNav = () => {
       </Modal>
 
     <li className="nav-item">
-        
-        <Link className="nav-link" to="/register">Sign up</Link>
+        <button  className="nav-link" onClick={handleShow2}>Sign Up</button>
     </li>
+
+    <Modal show={show2} onHide={handleClose2}>
+
+<Modal.Header closeButton>
+  <Modal.Title><h2 variant="secondary" className="mt-1">Sign up</h2></Modal.Title>
+</Modal.Header>
+
+<Modal.Body>
+<div className="form-group">
+    <Form onSubmit={handleSubmit}>
+
+        <Form.Group size="lg" controlId="name">
+        <Form.Label>Name</Form.Label>
+        <Form.Control
+            autoFocus
+            type="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+        />
+        </Form.Group>
+
+        <Form.Group size="lg" controlId="email">
+        <Form.Label>Email</Form.Label>
+        <Form.Control
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+        />
+        </Form.Group>
+
+        <Form.Group size="lg" controlId="password">
+        <Form.Label>Password</Form.Label>
+        <Form.Control
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+        />
+        </Form.Group>
+
+    </Form>
+</div>
+</Modal.Body>
+
+<Modal.Footer>
+  <Button variant="secondary" onClick={handleClose2} disabled={!validateForm2()}>
+  Sign In
+  </Button>
+  <Button variant="primary" onClick={handleClose2}>
+  Close
+  </Button>
+</Modal.Footer>
+
+</Modal>
+
 </ul>
 </nav>
 
