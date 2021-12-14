@@ -19,6 +19,12 @@ code {
   height: 330px;
   }
 
+  .fit-image2{
+    width: 80%;
+    object-fit: cover;
+    height: 180px;
+    }
+  
   button {
     background: none;
     color: inherit;
