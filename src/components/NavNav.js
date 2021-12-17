@@ -1,153 +1,39 @@
 // Joa
 import{Link} from "react-router-dom";
-import {Button, Modal} from 'react-bootstrap'
-import Form from "react-bootstrap/Form";
-import React, { useState } from 'react';
+import React from 'react';
+import Signin from "./Signin";
+import Signup from "./Signup";
+
 
 const NavNav = () => {
     
-    const [show2, setShow2] = useState(false);
-    const handleClose2 = () => setShow2(false);
-    const handleShow2 = () => setShow2(true);
 
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-
-  function validateForm() {
-    return email.length > 0 && password.length > 0;
-  }
-
-  function validateForm2() {
-    return name.length > 0  && email.length > 0 && password.length > 0;
-  }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-  }
     return(
-<nav className="navbar navbar-expand-lg navbar-light bg-light ">
-<a className="navbar-brand" href="/">Ciclo 5</a>
-<ul className="navbar-nav m-auto">
-    <li className="nav-item active">
-        <Link to="/" className="nav-link">Home<span class="sr-only"></span> </Link>
-    </li>
-    <li className="nav-item">
-        <Link to="/about" className="nav-link">About</Link>
-    </li>
-    <li className="nav-item">
-        <Link to="/contact" className="nav-link">Contact</Link>
-    </li>
-    <li className="nav-item">
-        <Link to="/service" className="nav-link">Service</Link>
-    </li>
-</ul>			    
-<ul className="navbar-nav ml-auto">
-    <li className="nav-item">
-        <button  className="nav-link" onClick={handleShow}>Sign In</button>
-    </li>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light ">
+            <a className="navbar-brand" href="/">Ciclo 5</a>
+            <ul className="navbar-nav m-auto">
+                <li className="nav-item active">
+                    <Link to="/" className="nav-link">Home<span className="sr-only"></span> </Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/about" className="nav-link">About</Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/contact" className="nav-link">Contact</Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/service" className="nav-link">Service</Link>
+                </li>
+            </ul>			    
+            <ul className="navbar-nav ml-auto">
 
-    <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Login</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-        <div className="Login">
-            <Form onSubmit={handleSubmit}>
-                <Form.Group size="lg" controlId="email">
-                <Form.Label>Email</Form.Label>
-                <Form.Control
-                    autoFocus
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-                </Form.Group>
-                <Form.Group size="lg" controlId="password">
-                <Form.Label>Password</Form.Label>
-                <Form.Control
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                </Form.Group>
-            </Form>
-            </div>
-            
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose} disabled={!validateForm()}>
-          Sign In
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-          Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
 
-    <li className="nav-item">
-        <button  className="nav-link" onClick={handleShow2}>Sign Up</button>
-    </li>
+                <Signin/>
 
-    <Modal show={show2} onHide={handleClose2}>
-
-<Modal.Header closeButton>
-  <Modal.Title><h2 variant="secondary" className="mt-1">Sign up</h2></Modal.Title>
-</Modal.Header>
-
-<Modal.Body>
-<div className="form-group">
-    <Form onSubmit={handleSubmit}>
-
-        <Form.Group size="lg" controlId="name">
-        <Form.Label>Name</Form.Label>
-        <Form.Control
-            autoFocus
-            type="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-        />
-        </Form.Group>
-
-        <Form.Group size="lg" controlId="email">
-        <Form.Label>Email</Form.Label>
-        <Form.Control
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-        />
-        </Form.Group>
-
-        <Form.Group size="lg" controlId="password">
-        <Form.Label>Password</Form.Label>
-        <Form.Control
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-        />
-        </Form.Group>
-
-    </Form>
-</div>
-</Modal.Body>
-
-<Modal.Footer>
-  <Button variant="secondary" onClick={handleClose2} disabled={!validateForm2()}>
-  Sign In
-  </Button>
-  <Button variant="primary" onClick={handleClose2}>
-  Close
-  </Button>
-</Modal.Footer>
-
-</Modal>
-
-</ul>
-</nav>
+                
+                <Signup/>
+            </ul>
+        </nav>
 
  )};
 

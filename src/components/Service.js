@@ -39,9 +39,9 @@ const Service = () => (
           <div className="col-md-4" key={card.id}>
             <div className="card">
               <div className="card-body ">
-                <h2 class="title mb-4 ">{card.title}</h2>
-                <img src={card.image} alt="" class="card-img img-responsive fit-image"/>
-                <p className="card-text text-secondary">{card.text}</p>
+                <h2 className="title mb-4 ">{card.title}</h2>
+                <img src={card.image} alt="" className="card-img img-responsive fit-image"/>
+                <div className="card-text text-secondary">{card.text}</div>
               </div>
             </div>
           </div>

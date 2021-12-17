@@ -4,7 +4,7 @@ import imgbanner from "../assets/Banner.jpg"
 
 const Banner = () => (
   <Alert variant="secondary" className="mt-1">      
-      <img src={imgbanner} alt="" class="card-img img-responsive fit-image"/>
+      <img src={imgbanner} alt="" className="card-img img-responsive fit-image"/>
   </Alert>
 );
 

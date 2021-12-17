@@ -68,11 +68,11 @@ const Home = () => (
   <div className="col-md-6 text-center" >
       <div className="card">
           <div className="card-body ">
-            <p className=" bg-black text-light text-capitalize card-text">
+            <div className=" bg-black text-light text-capitalize card-text">
               Transportamos los productos de nuestros cliente 
               de una forma rapida y segura gracias a nuestros vehiculos.
             <ImageGallery items={images} />
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -82,8 +82,8 @@ const Home = () => (
             <div className="col-md-3" key={card.id}>
               <div className="card">
                 <div className="card-body ">
-                  <img src={card.image} alt="" class="card-img img-responsive fit-image2"/>
-                  <p className="card-text text-secondary">{card.text}</p>
+                  <img src={card.image} alt="" className="card-img img-responsive fit-image2"/>
+                  <div className="card-text text-secondary">{card.text}</div>
                 </div>
               </div>
             </div>
