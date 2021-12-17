@@ -24,6 +24,12 @@ const NavNav = () => {
                 <li className="nav-item">
                     <Link to="/service" className="nav-link">Service</Link>
                 </li>
+                <li className="nav-item">
+                    <Link to="/profile" className="nav-link">Profile</Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/transport" className="nav-link">Transport</Link>
+                </li>
             </ul>			    
             <ul className="navbar-nav ml-auto">
 
